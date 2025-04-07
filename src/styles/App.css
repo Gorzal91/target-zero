@@ -1,0 +1,156 @@
+/* Ogólny układ */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  box-sizing: border-box;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(132deg, #D5F7E6 0%, #4AB687 100%);
+  background-color: #D5F7E6; /* Kolor zapasowy */
+}
+
+/* Nagłówek */
+.header {
+  position: fixed; /* Nagłówek pozostaje zawsze widoczny */
+  top: 0;
+  left: 0;
+  width: 100%; /* Nagłówek zajmuje całą szerokość strony */
+  /* background-color: #16A085; */
+  color: white;
+  padding: 10px 20px;
+  z-index: 100; /* Wyższy z-index, aby nagłówek był nad innymi elementami */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Dodanie cienia dla lepszej widoczności */
+  display: flex; /* Ustawienie flexboxa */
+  justify-content: space-around  ; /* Logo po lewej, nawigacja po prawej */
+  align-items: center; /* Wyśrodkowanie w pionie */
+  height: 60px; /* Wysokość nagłówka */
+}
+
+
+/* Nawigacja */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px; /* Odstęp między linkami */
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 24px; /* Zwiększ rozmiar czcionki */
+  transition: color 0.5s;
+}
+
+.nav-links li a:hover {
+  color: white; /* Zmiana koloru tekstu przy najechaniu */
+}
+
+/* Logo */
+.logo-container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.logo {
+  height: 80px;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.1); /* Powiększenie logo przy najechaniu */
+}
+
+
+/* Główna zawartość */
+.main-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 1; /* Ustaw zawartość nad gradientem i obrazem */
+  pointer-events: auto;
+}
+
+/* Stopka */
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 12px;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 1; /* Ustaw stopkę nad gradientem i obrazem */
+}
+
+.footer a {
+  color: #f1f1f1;
+  text-decoration: none;
+  margin: 0 5px;
+  font-size: 12px;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .nav-links li a {
+    font-size: 12px;
+  }
+
+  .main-content {
+    padding: 10px;
+  }
+
+  .footer {
+    padding: 5px;
+    font-size: 10px;
+  }
+
+  .footer a {
+    font-size: 10px;
+  }
+
+
+}
+
+.bg-orange {
+  background-color: #FFA500; 
+}
+
+.bg-very-unhealthy {
+  background-color: #800080; 
+}
+
+.bg-hazardous {
+  background-color: #7E0023; 
+}

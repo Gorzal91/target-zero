@@ -1,0 +1,167 @@
+/* Kontener główny dla ScrollList i background-element */
+.scroll-list-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: space-between;
+  height: 300vh; /* Pełna wysokość widoku */
+  overflow: hidden;
+  position: relative;
+  padding: 0;
+}
+
+/* Sekcja z background-element */
+.background-element {
+  flex: 1; /* Zajmuje lewą stronę */
+  background: url('../assets/background-element.svg') no-repeat center center;
+  background-size: cover;
+  height: 100vh; /* Pełna wysokość widoku */
+  position: fixed; /* Ustawienie statyczne (nie przesuwa się przy przewijaniu) */
+  top: 0;
+  left: 0;
+  width: 50vw; /* Zajmuje połowę szerokości ekranu */
+  z-index: 0; /* Nie nachodzi na nagłówek */
+}
+
+/* Kontener listy */
+.scroll-list-container {
+  flex: 1; /* Zajmuje prawą stronę */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Wyrównanie elementów do prawej strony */
+  justify-content: flex-start;
+  height: 300vh; /* Każdy element zajmuje 100vh, więc 3 elementy = 300vh */
+  overflow: hidden;
+  text-align: right; /* Wyrównanie tekstu do prawej */
+  padding: 20px;
+  position: relative;
+  z-index: 1; /* Kontener ma wyższy z-index niż background-element */
+}
+
+/* Elementy listy */
+.scroll-item {
+  font-size: 2.5vw; /* Rozmiar czcionki zależny od szerokości ekranu */
+  font-weight: bold;
+  margin: 0;
+  width: 50%; /* Tekst zajmuje 50% prawej części strony */
+  height: 100vh; /* Każdy element zajmuje pełną wysokość widoku */
+  display: flex;
+  align-items: center; /* Wyśrodkowanie tekstu w pionie */
+  justify-content: flex-end; /* Wyrównanie tekstu do prawej */
+  opacity: 0; /* Ukryte przed animacją */
+  transform: translateY(0); /* Startowa pozycja */
+  will-change: opacity, transform;
+  z-index: 1; /* Elementy mają wyższy z-index niż background-element */
+}
+
+/* Pierwszy element widoczny od razu */
+.scroll-item:first-child {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Nagłówek */
+.header {
+  position: fixed; /* Nagłówek pozostaje zawsze widoczny */
+  top: 0;
+  left: 0;
+  width: 100%; /* Nagłówek zajmuje całą szerokość strony */
+  /* background-color: #16A085; */
+  color: white;
+  padding: 10px 20px;
+  z-index: 100; /* Wyższy z-index, aby nagłówek był nad tekstem */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Dodanie cienia dla lepszej widoczności */
+  display: flex; /* Ustawienie flexboxa */
+  justify-content: space-between; /* Logo po lewej, nawigacja po prawej */
+  align-items: center; /* Wyśrodkowanie w pionie */
+  height: 60px; /* Wysokość nagłówka */
+  flex-wrap: nowrap; /* Zapobiega zawijaniu elementów */
+  overflow: hidden; /* Ukrywa nadmiar treści */
+}
+
+/* Nawigacja */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px; /* Odstęp między linkami */
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Ukrywa nadmiar treści */
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 16px; /* Rozmiar czcionki */
+  white-space: nowrap; /* Zapobiega zawijaniu tekstu */
+  transition: color 0.3s; /* Animacja zmiany koloru */
+}
+
+.nav-links li a:hover {
+  color: white; /* Zmiana koloru tekstu przy najechaniu */
+}
+
+/* Logo */
+.logo-container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.logo {
+  height: 40px; /* Wysokość logo */
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.1); /* Powiększenie logo przy najechaniu */
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+  .background-element {
+    width: 100%; /* Zajmuje całą szerokość ekranu na mniejszych urządzeniach */
+    height: 50vh; /* Zmniejszona wysokość */
+  }
+
+  .scroll-item {
+    font-size: 4vw; /* Większy rozmiar czcionki na mniejszych ekranach */
+    width: 80%; /* Tekst zajmuje większą część ekranu */
+  }
+
+  .nav-links {
+    gap: 10px; /* Zmniejszenie odstępów między linkami */
+  }
+
+  .nav-links li a {
+    font-size: 14px; /* Zmniejszenie rozmiaru czcionki */
+  }
+
+  .logo {
+    height: 30px; /* Zmniejszenie logo na mniejszych ekranach */
+  }
+}
+
+@media (max-width: 480px) {
+  .background-element {
+    height: 40vh; /* Jeszcze mniejsza wysokość */
+  }
+
+  .scroll-item {
+    font-size: 5vw; /* Dostosowanie rozmiaru czcionki */
+    width: 90%; /* Tekst zajmuje prawie całą szerokość ekranu */
+  }
+
+  .nav-links {
+    gap: 5px; /* Jeszcze mniejsze odstępy */
+  }
+
+  .nav-links li a {
+    font-size: 12px; /* Jeszcze mniejszy rozmiar czcionki */
+  }
+
+  .logo {
+    height: 25px; /* Jeszcze mniejsze logo */
+  }
+}

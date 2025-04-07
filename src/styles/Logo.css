@@ -1,0 +1,14 @@
+.logo-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+  
+.logo {
+    height: 80px; /* Powiększenie logo */
+    transition: transform 0.3s ease;
+}
+  
+.logo:hover {
+    transform: scale(1.1); /* Powiększenie logo przy najechaniu */
+}
