@@ -1,0 +1,144 @@
+/* Główny kontener */
+.articles-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .articles-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .articles-container p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 30px;
+  }
+  
+  /* Slider */
+  .articles-slider {
+    margin-top: 20px;
+  }
+  
+  .slider-item {
+    position: relative;
+    text-align: center;
+  }
+  
+  .slider-image {
+    width: 100%;
+    height: auto;
+    max-height: 400px; /* Maksymalna wysokość obrazu */
+    object-fit: cover; /* Dopasowanie obrazu do kontenera */
+    border-radius: 10px;
+  }
+  
+  .slider-content {
+    margin-top: 15px;
+  }
+  
+  .slider-content h2 {
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  .slider-content p {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  .learn-more-btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background-color: #16A085;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .learn-more-btn:hover {
+    background-color: #13876b;
+  }
+  
+  /* Modal */
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    width: 90%;
+    text-align: center;
+  }
+  
+  .modal-content h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .modal-content p {
+    font-size: 1.2rem;
+    color: #555;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+  }
+  
+  /* Responsywność */
+  @media (max-width: 768px) {
+    .articles-container h1 {
+      font-size: 2rem;
+    }
+  
+    .articles-container p {
+      font-size: 1rem;
+    }
+  
+    .slider-image {
+      max-height: 300px; /* Zmniejszenie maksymalnej wysokości obrazu */
+    }
+  
+    .slider-content h2 {
+      font-size: 1.2rem;
+    }
+  
+    .slider-content p {
+      font-size: 0.9rem;
+    }
+  
+    .learn-more-btn {
+      font-size: 0.9rem;
+      padding: 8px 16px;
+    }
+  
+    .modal-content h2 {
+      font-size: 1.5rem;
+    }
+  
+    .modal-content p {
+      font-size: 1rem;
+    }
+  }

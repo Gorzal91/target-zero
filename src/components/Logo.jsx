@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/Logo.css';
-import logo from '../assets/logo.svg'; // Import pliku SVG
+import logo from '../assets/logo2.png'; // Import pliku SVG
 
 const Logo = ({ onClick }) => {
   return (
