@@ -5,7 +5,7 @@ import About from './components/About';
 import ScrollList from './components/ScrollList';
 import Footer from './components/Footer';
 import Articles from './components/Articles';
-import AirQuality from './components/AirQuality';
+import AirQuality from './components/AirQuality/AirQuality';
 import './styles/App.css';
 
 
@@ -20,9 +20,9 @@ function App() {
           </Link>
           <nav>
             <ul className="nav-links">
-              <li>
+              {/* <li>
                 <Link to="/">Home</Link>
-              </li>
+              </li> */}
               <li>
                 <Link to="/about">About</Link>
               </li>

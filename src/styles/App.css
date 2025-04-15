@@ -29,9 +29,9 @@ html, body {
   z-index: 100; /* Wyższy z-index, aby nagłówek był nad innymi elementami */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Dodanie cienia dla lepszej widoczności */
   display: flex; /* Ustawienie flexboxa */
-  justify-content: space-around  ; /* Logo po lewej, nawigacja po prawej */
+  justify-content: space-between  ; /* Logo po lewej, nawigacja po prawej */
   align-items: center; /* Wyśrodkowanie w pionie */
-  height: 60px; /* Wysokość nagłówka */
+  height: 80px; /* Wysokość nagłówka */
 }
 
 
@@ -64,8 +64,8 @@ html, body {
 }
 
 .logo {
-  height: 80px;
-  transition: transform 0.3s ease;
+  height: 100px;
+  transition: transform 0.2s ease;
 }
 
 .logo:hover {
@@ -84,6 +84,7 @@ html, body {
   box-sizing: border-box;
   z-index: 1; /* Ustaw zawartość nad gradientem i obrazem */
   pointer-events: auto;
+  padding-top: 50px; 
 }
 
 /* Stopka */
@@ -138,6 +139,36 @@ html, body {
 
   .footer a {
     font-size: 10px;
+  }
+
+  @media (max-width: 480px) {
+    .header {
+      padding: 5px;
+    }
+  
+    .nav-links {
+      gap: 5px;
+    }
+  
+    .nav-links li a {
+      font-size: 14px;
+    }
+  
+    .logo {
+      height: 30px;
+    }
+  
+    .main-content {
+      padding: 5px;
+    }
+  
+    .footer {
+      font-size: 8px;
+    }
+  
+    .footer a {
+      font-size: 8px;
+    }
   }
 
 
