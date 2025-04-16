@@ -4,7 +4,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import '../styles/ScrollList.css';
 
-// Import obrazów z folderu assets
+// import images
 import Picture1 from '../assets/picture1.svg';
 import Picture2 from '../assets/picture2.svg';
 import Picture3 from '../assets/picture3.svg';
@@ -22,7 +22,7 @@ const ScrollList = ({
 }) => {
   const containerRef = useRef(null);
 
-  const images = [Picture1, Picture2, Picture3]; // Tablica obrazów
+  const images = [Picture1, Picture2, Picture3]; // table of images
 
   useEffect(() => {
     const el = containerRef.current;
@@ -37,7 +37,7 @@ const ScrollList = ({
       return;
     }
 
-    // Animacja dla każdego elementu
+    // animation for each item
     itemElements.forEach((item, index) => {
       gsap.fromTo(
         item,
@@ -47,8 +47,8 @@ const ScrollList = ({
           x: 0,
           scrollTrigger: {
             trigger: item,
-            start: 'top 90%', // Animacja zaczyna się, gdy element jest w 80% widoczny
-            end: 'top 10%', // Animacja kończy się, gdy element jest w 20% widoczny
+            start: 'top 90%', // animation starts when the element is 90% visible
+            end: 'top 10%', // animation ends when the element is 10% visible
             scrub: true,
             onEnter: () => {
               document.querySelector('.background-element').style.backgroundImage = `url(${images[index]})`;
@@ -61,7 +61,7 @@ const ScrollList = ({
       );
     });
 
-    // Ustawienie obrazu `Picture1` po powrocie na górę strony
+    // set background image for the first item
     ScrollTrigger.create({
       trigger: el,
       start: 'top top',
@@ -71,7 +71,7 @@ const ScrollList = ({
       },
     });
 
-    // Czyszczenie animacji po odmontowaniu komponentu
+    // cleanup function to kill all ScrollTriggers when the component unmounts
     return () => {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };

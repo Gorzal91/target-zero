@@ -41,7 +41,7 @@ const Articles = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 4000,
+    autoplaySpeed: 2500,
   };
 
   const handleLearnMore = (article) => {
@@ -64,7 +64,7 @@ const Articles = () => {
             <img src={article.imgSrc} alt={article.title} className="slider-image" />
             <div className="slider-content">
               <h2>{article.title}</h2>
-              <p>{article.content.substring(0, 100)}...</p> {/* Skrócona treść */}
+              <p>{article.content.substring(0, 100)}...</p> {/* short text   */}
               <button className="learn-more-btn" onClick={() => handleLearnMore(article)}>
                 Learn More...
               </button>

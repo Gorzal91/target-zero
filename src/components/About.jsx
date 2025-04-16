@@ -7,7 +7,7 @@ const About = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    let isMounted = true; // Flaga, aby upewnić się, że efekt jest wywoływany tylko raz
+    let isMounted = true; // Flag to track if the component is mounted
     setIsLoading(true);
 
     async function fetchTeamMembers() {
@@ -21,7 +21,7 @@ const About = () => {
         const members = data.map((item) => ({
           id: item.results[0].login.uuid,
           name: `${item.results[0].name.first} ${item.results[0].name.last}`,
-          title: item.results[0].name.title, // Pobieramy tytuł zawodowy
+          title: item.results[0].name.title, // Adding title
           imgSrc: item.results[0].picture.large,
         }));
         if (isMounted) {
@@ -42,7 +42,7 @@ const About = () => {
     fetchTeamMembers();
 
     return () => {
-      isMounted = false; // Funkcja czyszcząca
+      isMounted = false; // Cleanup function to set the flag to false when the component unmounts
     };
   }, []);
 
@@ -76,7 +76,7 @@ const About = () => {
           <div key={member.id} className="team-member">
             <img src={member.imgSrc} alt={member.name} className="profile-pic" />
             <p className="member-name">{member.name}</p>
-            <p className="member-title">{member.title}</p> {/* Wyświetlamy tytuł zawodowy */}
+            <p className="member-title">{member.title}</p> {/*show title */}
           </div>
         ))}
       </div>

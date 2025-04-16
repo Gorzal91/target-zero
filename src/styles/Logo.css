@@ -5,10 +5,10 @@
 }
   
 .logo {
-    height: 80px; /* Powiększenie logo */
+    height: 80px; 
     transition: transform 0.3s ease;
 }
   
 .logo:hover {
-    transform: scale(1.1); /* Powiększenie logo przy najechaniu */
+    transform: scale(1.1); /* Enlarge logo on hover */
 }

@@ -1,4 +1,4 @@
-/* Ogólny układ */
+/* App Component - General Layout */
 html, body {
   margin: 0;
   padding: 0;
@@ -14,32 +14,30 @@ html, body {
   flex-direction: column;
   min-height: 100vh;
   background: linear-gradient(132deg, #D5F7E6 0%, #4AB687 100%);
-  background-color: #D5F7E6; /* Kolor zapasowy */
+  background-color: #D5F7E6; /* Fallback color */
 }
 
-/* Nagłówek */
+/* App Component - Header */
 .header {
-  position: fixed; /* Nagłówek pozostaje zawsze widoczny */
+  position: fixed; /* Header remains always visible */
   top: 0;
   left: 0;
-  width: 100%; /* Nagłówek zajmuje całą szerokość strony */
-  /* background-color: #16A085; */
+  width: 100%; /* Header spans the full width of the page */
   color: white;
   padding: 10px 20px;
-  z-index: 100; /* Wyższy z-index, aby nagłówek był nad innymi elementami */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Dodanie cienia dla lepszej widoczności */
-  display: flex; /* Ustawienie flexboxa */
-  justify-content: space-between  ; /* Logo po lewej, nawigacja po prawej */
-  align-items: center; /* Wyśrodkowanie w pionie */
-  height: 80px; /* Wysokość nagłówka */
+  z-index: 100; /* Higher z-index to keep the header above other elements */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add shadow for better visibility */
+  display: flex; /* Use flexbox */
+  justify-content: space-between; /* Logo on the left, navigation on the right */
+  align-items: center; /* Center vertically */
+  height: 80px; /* Header height */
 }
 
-
-/* Nawigacja */
+/* App Component - Navigation */
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 25px; /* Odstęp między linkami */
+  gap: 25px; /* Space between links */
   margin: 0;
   padding: 0;
 }
@@ -48,15 +46,15 @@ html, body {
   text-decoration: none;
   color: black;
   font-weight: bold;
-  font-size: 24px; /* Zwiększ rozmiar czcionki */
+  font-size: 24px; /* Increase font size */
   transition: color 0.5s;
 }
 
 .nav-links li a:hover {
-  color: white; /* Zmiana koloru tekstu przy najechaniu */
+  color: white; /* Change text color on hover */
 }
 
-/* Logo */
+/* App Component - Logo */
 .logo-container {
   display: flex;
   align-items: center;
@@ -69,11 +67,10 @@ html, body {
 }
 
 .logo:hover {
-  transform: scale(1.1); /* Powiększenie logo przy najechaniu */
+  transform: scale(1.1); /* Enlarge logo on hover */
 }
 
-
-/* Główna zawartość */
+/* App Component - Main Content */
 .main-content {
   flex: 1;
   display: flex;
@@ -82,12 +79,12 @@ html, body {
   padding: 20px;
   width: 100%;
   box-sizing: border-box;
-  z-index: 1; /* Ustaw zawartość nad gradientem i obrazem */
+  z-index: 1; /* Place content above gradient and image */
   pointer-events: auto;
   padding-top: 50px; 
 }
 
-/* Stopka */
+/* App Component - Footer */
 .footer {
   background-color: #333;
   color: white;
@@ -96,7 +93,7 @@ html, body {
   font-size: 12px;
   width: 100%;
   box-sizing: border-box;
-  z-index: 1; /* Ustaw stopkę nad gradientem i obrazem */
+  z-index: 1; /* Place footer above gradient and image */
 }
 
 .footer a {
@@ -110,7 +107,7 @@ html, body {
   text-decoration: underline;
 }
 
-/* Responsywność */
+/* App Component - Responsiveness */
 @media (max-width: 768px) {
   .header {
     flex-direction: column;
@@ -170,10 +167,9 @@ html, body {
       font-size: 8px;
     }
   }
-
-
 }
 
+/* Air Quality Card Component - additional colors */
 .bg-orange {
   background-color: #FFA500; 
 }

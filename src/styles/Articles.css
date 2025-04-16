@@ -1,8 +1,8 @@
-/* Główny kontener */
+/* Articles Component - Main Container */
 .articles-container {
   padding: 20px;
   max-width: 1200px;
-  margin: 100px auto 0 auto; /* Dodano margines górny równy wysokości nagłówka */
+  margin: 100px auto 0 auto; /* Added top margin equal to header height */
   text-align: center;
 }
 
@@ -17,7 +17,7 @@
   margin-bottom: 30px;
 }
 
-/* Slider */
+/* Articles Component - Slider */
 .articles-slider {
   margin-top: 20px;
 }
@@ -30,8 +30,8 @@
 .slider-image {
   width: 100%;
   height: auto;
-  max-height: 400px; /* Maksymalna wysokość obrazu */
-  object-fit: cover; /* Dopasowanie obrazu do kontenera */
+  max-height: 400px; /* Maximum image height */
+  object-fit: cover; /* Fit image to container */
   border-radius: 10px;
 }
 
@@ -65,7 +65,7 @@
   background-color: #13876b;
 }
 
-/* Modal */
+/* Articles Component - Modal */
 .modal {
   position: fixed;
   top: 0;
@@ -107,7 +107,7 @@
   cursor: pointer;
 }
 
-/* Responsywność */
+/* Articles Component - Responsiveness */
 @media (max-width: 768px) {
   .articles-container h1 {
     font-size: 2rem;
@@ -118,7 +118,7 @@
   }
 
   .slider-image {
-    max-height: 300px; /* Zmniejszenie maksymalnej wysokości obrazu */
+    max-height: 300px; /* Reduced maximum image height */
   }
 
   .slider-content h2 {
@@ -142,4 +142,3 @@
     font-size: 1rem;
   }
 }
-
