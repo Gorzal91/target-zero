@@ -1,19 +1,16 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-
 # Net Zero Climate App
 
 This project is a React application focused on achieving net-zero climate goals. It provides users with information, resources, and tools to understand and contribute to climate action.
+
+## Features
+
+- **Dynamic Navigation:** Navigate between different sections such as About, Articles, and Air Quality.
+- **Interactive Components:**
+  - **ScrollList:** A scrollable list with animations and dynamic background changes.
+  - **Articles:** A slider showcasing articles with "Learn More" functionality to expand content.
+  - **Air Quality:** Displays air quality data for selected cities.
+- **Responsive Design:** Fully responsive layout for desktop and mobile devices.
+- **Reusable Components:** Modular components like Header, Footer, and Logo for easy maintenance.
 
 ## Project Structure
 
@@ -24,12 +21,18 @@ net-zero-climate-app
 │   └── favicon.ico         # Favicon for the application
 ├── src
 │   ├── components          # Contains React components
-│   │   ├── Header.jsx      # Header component with title and navigation
+│   │   ├── About.jsx       # About section with team information
+│   │   ├── Articles.jsx    # Articles section with slider and expandable content
+│   │   ├── AirQuality      # Folder for Air Quality-related components
+│   │   │   └── AirQuality.jsx # Displays air quality data
 │   │   ├── Footer.jsx      # Footer component with copyright information
-│   │   └── Tabs.jsx        # Tab navigation component for different sections
+│   │   ├── Logo.jsx        # Logo component for the header
+│   │   ├── ScrollList.jsx  # Scrollable list with animations
 │   ├── styles              # Contains CSS styles
+│   │   ├── About.css       # Styles for the About section
 │   │   ├── App.css         # Main styles for the application
-│   │   └── Tabs.css        # Styles specific to the Tabs component
+│   │   ├── Articles.css    # Styles for the Articles section
+│   │   └── ScrollList.css  # Styles for the ScrollList component
 │   ├── App.jsx             # Main component of the application
 │   ├── index.jsx           # Entry point of the React application
 │   └── assets              # Contains image assets
@@ -45,23 +48,50 @@ To get started with the project, follow these steps:
 
 1. **Clone the repository:**
 
-   ```
+   ```bash
    git clone <repository-url>
    cd net-zero-climate-app
    ```
 
 2. **Install dependencies:**
 
-   ```
+   ```bash
    npm install
    ```
 
 3. **Run the application:**
-   ```
+
+   ```bash
    npm start
    ```
 
-The application will be available at `http://localhost:3000`.
+   The application will be available at `http://localhost:3000`.
+
+## Components Overview
+
+### **About**
+
+- Displays information about the project and team members.
+- Includes profile pictures, names, and roles.
+
+### **Articles**
+
+- A slider showcasing articles with images and expandable content.
+- Users can click "Learn More" to view the full article.
+
+### **ScrollList**
+
+- A scrollable list with animations and dynamic background changes.
+- Highlights key information about climate goals and air quality.
+
+### **Air Quality**
+
+- Displays air quality data for selected cities.
+- Provides insights into pollution levels and environmental conditions.
+
+### **Footer**
+
+- Contains copyright information and links to additional resources.
 
 ## Contributing
 
