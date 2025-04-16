@@ -1,4 +1,4 @@
-# Net Zero Climate App
+# Target Zero Climate App
 
 This project is a React application focused on achieving net-zero climate goals. It provides users with information, resources, and tools to understand and contribute to climate action.
 
