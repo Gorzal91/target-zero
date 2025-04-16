@@ -65,7 +65,12 @@ To get started with the project, follow these steps:
    npm start
    ```
 
-   The application will be available at `http://localhost:3000`.
+## Deployment
+
+This project is deployed on GitHub Pages. You can view it live at:
+[https://Gorzal91.github.io/target-zero](https://Gorzal91.github.io/target-zero)
+
+---
 
 ## Components Overview
 
@@ -96,7 +101,3 @@ To get started with the project, follow these steps:
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a pull request or open an issue for any suggestions or improvements.
-
-## License
-
-This project is licensed under the MIT License. See the LICENSE file for details.
